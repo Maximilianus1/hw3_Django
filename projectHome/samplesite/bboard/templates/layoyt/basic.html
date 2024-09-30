@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static '/bboard/style.css' %}">
+        <meta charset="UTF-8">
+        {% include 'layoyt/Title.html' %}
+        {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+      </head>
+      <body>
+        {% include 'layoyt/Header.html' %}
+
+        <section class="row justify-content-center mb-4 mt-4">
+            {% block content %}
+            {% endblock %}
+        </section>
+      {% include 'layoyt/Footer.html' %}
+      <script src="{% static 'js/scripts.js' %}"></script>
+      </body>
+</html>

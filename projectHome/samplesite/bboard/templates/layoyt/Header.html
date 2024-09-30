@@ -1,0 +1,11 @@
+{% load static %}
+<header>
+{% block header %}
+            <div class="container-fluid">
+    <nav class="navbar m-s2 m-e2 d-flex gap-3 navbar-expand-lg navbar-light bg-secondary justify-content-evenly">
+        <a class="navbar-brand link-light text-light" href="{% url 'index' %}">Главная</a>
+        <a class="navbar-brand link-light text-light" href="{% url 'login' %}">Логин</a>
+    </nav>
+    </div>
+{% endblock %}
+</header>

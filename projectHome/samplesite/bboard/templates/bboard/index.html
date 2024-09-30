@@ -1,0 +1,32 @@
+{% extends "layoyt/basic.html" %}
+
+{% block title %}Главная: Доска продуктов{% endblock %}
+{% block header %}
+<h1 class="text-light">Объявление</h1>
+{{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid d-flex flex-column gap-4 mt-3 ms-2 me-2 w-25 justify-content-center">
+        <div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Главная</h1>
+        <p class="lead">Сайт объявлений</p>
+        <hr class="my-4">
+        <p>Обьявления:</p>
+    </div>
+
+    {% for bb in bbs %}
+        <div class="container bg-secondary text-light ">
+            <h2>{{bb.title}}</h2>
+            <p>{{bb.content}}</p>
+            <p>{{bb.published|date:"d.m.Y H:i:s"}}</p>
+        </div>
+    {% endfor %}
+
+
+    </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    {{ block.super }}
+{% endblock %}
